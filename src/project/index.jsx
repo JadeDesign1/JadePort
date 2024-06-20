@@ -36,7 +36,7 @@ const Project = () => {
               ...articleStyle,
               backgroundImage: `url(${project.img})`,
             }}
-            className="border-[3px] relative rounded-[8px] md:w-[400px] min-w-[250px] h-[200px] border-amber-800 group"
+            className="border-[3px] relative rounded-[8px] md:w-[400px] min-w-[250px] h-[200px] border-primary group"
             key={i}
             ref={ref}
             animate={control}

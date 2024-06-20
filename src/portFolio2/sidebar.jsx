@@ -1,6 +1,7 @@
 import { Link, useLocation } from "react-router-dom";
 import { Links } from "./data";
 import "../App.css";
+import { HiLightBulb, HiOutlineWrenchScrewdriver } from "react-icons/hi2";
 
 const Sidebar = () => {
   const location = useLocation();

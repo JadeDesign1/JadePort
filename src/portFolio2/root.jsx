@@ -1,6 +1,7 @@
 import { Outlet } from "react-router-dom";
 import Sidebar from "./sidebar";
 import Header from "./Header";
+import { HiLightBulb } from "react-icons/hi2";
 
 export default function Root() {
   return (
