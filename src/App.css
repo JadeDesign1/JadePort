@@ -1,0 +1,50 @@
+.svg-circle {
+  position: absolute;
+  top: -8px;
+  right: 5px;
+}
+
+.outer-circle {
+  height: 120px;
+  width: 120px;
+  margin: 0 0 0 7px;
+  border-radius: 50%;
+  padding: 16px;
+  background-color: green;
+  box-shadow: -5px -5px 10px -1px rgba(255, 255, 255, 0.7),
+    6px 6px 10px -1px rgba(0, 0, 0, 0.15);
+}
+
+.inner-circle {
+  height: 90px;
+  width: 90px;
+  border-radius: 50%;
+  background-color: white;
+  box-shadow: inset 4px 4px 6px -1px rgba(0, 0, 0, 0.2),
+    inset -4px -4px 6px -1px rgba(255, 255, 255, 0.7),
+    -0.5px -0.5px 0px rgba(255, 255, 255, 1),
+    0.5px 0.5px 0px rgba(0, 0, 0, 0.15), 0px 12px 10px 10px rgba(0, 0, 0, 0.05);
+}
+
+.heading {
+  @apply text-[25px] md:text-[50px] sm:text-[38px] sm:font-[750px] lg:text-[60px] lg:font-[800] duration-200 font-[650] whitespace-nowrap md:tracking-wide leading-[70px] md:leading-[90px] text-primary text-start;
+}
+
+.label {
+  @apply pl-2 font-semibold peer-focus:tracking-widest tracking-wider peer-placeholder-shown:font-normal text-sm top-0 sm:text-sm peer-placeholder-shown:text-light  peer-placeholder-shown:text-sm peer-placeholder-shown:top-6 transition-all duration-300 absolute peer-focus:top-0 peer-focus:text-sm peer-focus:font-normal;
+}
+.input {
+  @apply bg-light/30 w-full placeholder:text-transparent outline-none border sm:text-base text-sm rounded-lg pl-2 py-1 flex border-primary;
+}
+
+.btn {
+  @apply relative whitespace-nowrap px-16 mt-6 isolate flex justify-center items-center select-none overflow-hidden rounded-tr-[24px] rounded-bl-[24px] border align-middle transition-all duration-500 before:absolute before:-start-3 before:top-0 before:-z-10 before:h-full before:w-[calc(100%+1.5rem)] before:origin-right before:-skew-x-[16deg] before:scale-x-0 before:transition-transform before:duration-500 hover:[&:not(:disabled)]:before:scale-x-100 focus-visible:[&:not(:disabled)]:before:scale-x-100 active:[&:not(:disabled)]:scale-[1.01] disabled:opacity-70 py-3 md:text-lg hover:[&:not(:disabled)]:tracking-[0.075em] bg-neutral-800 hover:[&:not(:disabled)]:text-neutral-50 focus-visible:text-dark text-primary border-primary hover:text-dark before:bg-primary disabled:cursor-progress max-sm:w-1/2;
+}
+
+.active {
+  @apply bg-plight text-pdark;
+}
+
+* {
+  @apply transition-all duration-100;
+}
