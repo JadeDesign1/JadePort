@@ -15,7 +15,7 @@ const Skills = () => {
   }, [isInView]);
   return (
     <div className="flex flex-col h-full gap-4 items-center">
-      <div className="mt-4 flex-wrap w-full flex flex-row mx-auto justify-center gap-2 ">
+      <div className="mt-2 flex-wrap w-full flex flex-row mx-auto justify-center gap-2 ">
         {Ski.map((ski, i) => {
           return (
             <motion.section
@@ -55,7 +55,7 @@ const Skills = () => {
               className="flex justify-center mx-auto items-center gap-[4px] flex-col "
               key={i}
             >
-              <h3 className="header text-center text-primary font-semibold text-[16px] sm:text-[18px] pr-2 pb-4 ">
+              <h3 className="header text-center text-primary font-semibold text-[16px] sm:text-[18px] pr-2 pb-2 ">
                 {ski.title}
               </h3>
               <Svg percent={ski.per} />

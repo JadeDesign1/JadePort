@@ -14,7 +14,7 @@ const Contact = () => {
       >
         <div className=" flex md:flex-row flex-wrap w-full">
           <section>
-            <div className="relative w-full pt-5">
+            <div className="relative w-full pt-4">
               <input
                 className="input peer"
                 type="text"
@@ -27,7 +27,7 @@ const Contact = () => {
               </label>
             </div>
 
-            <div className="relative pt-5">
+            <div className="relative pt-4">
               <input
                 className="input peer"
                 type="text"
@@ -39,7 +39,7 @@ const Contact = () => {
               </label>
             </div>
 
-            <div className="relative pt-5">
+            <div className="relative pt-4">
               <input
                 className="input peer"
                 type="email"
@@ -51,7 +51,7 @@ const Contact = () => {
                 Email
               </label>
             </div>
-            <div className="pt-5 relative">
+            <div className="pt-4 relative">
               <textarea
                 className="input peer"
                 name="message"
