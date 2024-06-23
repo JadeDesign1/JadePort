@@ -1,9 +1,9 @@
 const Contact = () => {
   return (
-    <div className="md:px-8 sm:px-4 px-2 flex flex-col gap-2 scroll-mt-6 mb-8 min-h-[100vh]">
+    <div className="container">
       <section>
-        <h2 className="heading">Contact me</h2>
-        <p className="text-light w-full font-semibold text-[18px] md:text-[22px]">
+        <h1>Contact me</h1>
+        <p className="w-full">
           If you have any job offer for me, you could use the form below to
           reach out to me.
         </p>
@@ -11,10 +11,9 @@ const Contact = () => {
       <form
         action="https://getform.io/f/0e78ef00-9981-49bd-ae32-63dd74b73f15"
         method="POST"
-        className="mx-auto text-light gap-1 sm:gap-2 w-full flex justify-center items-start flex-col text-xs md:text-sm"
       >
         <div className=" flex md:flex-row flex-wrap w-full">
-          <section className=" flex flex-col justify-center sm:justify-start mx-auto w-[280px] sm:w-[60%] lg:w-1/2 sm:gap-2">
+          <section>
             <div className="relative w-full pt-5">
               <input
                 className="input peer"

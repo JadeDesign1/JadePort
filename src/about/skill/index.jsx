@@ -55,7 +55,7 @@ const Skills = () => {
               className="flex justify-center mx-auto items-center gap-[4px] flex-col "
               key={i}
             >
-              <h3 className="header text-center text-primary font-semibold text-[16px] sm:text-[18px] pr-2 pb-1 ">
+              <h3 className="header text-center text-primary font-semibold text-[16px] sm:text-[18px] pr-2 pb-4 ">
                 {ski.title}
               </h3>
               <Svg percent={ski.per} />

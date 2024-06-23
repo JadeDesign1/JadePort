@@ -15,13 +15,10 @@ const About = () => {
     }
   }, [isInView]);
   return (
-    <div
-      id="about"
-      className="sm:px-8 px-4  flex flex-col gap-10 scroll-mt-6 overflow-y-hidden  min-h-screen"
-    >
+    <div id="about" className="container overflow-hidden">
       {/* About section */}
       <section className="md:w-[90%] lg:w-4/5 flex flex-col gap-2">
-        <h2 className="heading">About & Skill</h2>
+        <h1>About & Skill</h1>
         <section className="text-light w-full font-semibold text-[18px] md:text-[22px]">
           <motion.div
             ref={ref}
@@ -33,7 +30,7 @@ const About = () => {
               visible: { opacity: 1, x: 0 },
             }}
           >
-            <span>
+            <p className="w-full">
               I am a dedicated frontend developer with a strong passion for
               creating user-friendly and efficient web applications. I am
               seeking a role within an established IT company where I can
@@ -43,7 +40,7 @@ const About = () => {
               responsive and visually appealing web interfaces, implementing
               dynamic features with seamless interactions, and crafting
               intuitive user experiences that consistently satisfy users.
-            </span>{" "}
+            </p>{" "}
           </motion.div>
 
           <motion.div

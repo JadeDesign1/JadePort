@@ -1,22 +1,18 @@
 import React, { useState } from "react";
 import { Links } from "./data";
 import { Link } from "react-router-dom";
+import DarkMode from "./darkMode";
 const Header = () => {
   const [show, setShow] = useState(false);
   return (
     <header className="fixed md:hidden top-0 right-0 left-0 py-2 px-4 w-full  z-[500]">
       {/* *****mobile nav****** */}
-      <div
-        onClick={() => setShow(!show)}
-        className="float-right sm:mr-2 mt-1 bg-[#42575a] hover:bg-[#505352] z-[100] w-[50px] flex justify-center relative cursor-pointer items-center p-1 rounded-full h-[50px] "
-      >
+      <div onClick={() => setShow(!show)} className="navToggle">
         <div className="absolute top-2 ">
           {show ? (
-            <span className="text-pdark text-[25px] hover:rotate-180 duration-500 font-bold z-[1200] relative inline-block">
-              X
-            </span>
+            <span className="closeToggle">X</span>
           ) : (
-            <span className="w-[24px] z-[1200] h-[4px] relative inline-block bg-primary before:content-[''] after:content-[''] after:absolute after:w-[60%] after:right-0 after:h-[4px] after:bg-red-500 before-w-[60%] before:h-[4px] before:-translate-y-2 after:translate-y-2 before:absolute before:bg-yellow-500 before:w-[60%]"></span>
+            <span className="w-[24px] z-[1200] h-[4px] relative inline-block bg-[var(--primary)] before:content-[''] after:content-[''] after:absolute after:w-[60%] after:right-0 after:h-[4px] after:bg-red-500 before-w-[60%] before:h-[4px] before:-translate-y-2 after:translate-y-2 before:absolute before:bg-yellow-500 before:w-[60%]"></span>
           )}
         </div>
 
@@ -31,14 +27,14 @@ const Header = () => {
             return (
               <li
                 key={i}
-                className="text-[24px] hover:text-primary mb-3 last:mb-0"
+                className="text-[24px] hover:text-[var(--primary)] mb-3 last:mb-0"
               >
                 <Link
-                  className="text-[24px] font-semibold flex flex-row items-center gap-4 tracking-wider cursor-pointer hover:text-primary capitalize duration-200 text-black"
+                  className="text-[24px] font-semibold flex flex-row items-center gap-4 tracking-wider cursor-pointer hover:text-[var(--primary)] capitalize duration-200 text-black"
                   to={`${navLink.heading}`}
                 >
                   {navLink.icon && (
-                    <span className="text-primary">
+                    <span className="text-[var(--primary)]">
                       <navLink.icon />
                     </span>
                   )}

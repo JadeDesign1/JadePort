@@ -17,12 +17,13 @@ const Project = () => {
     backgroundSize: "cover",
     backgroundRepeat: "no-repeat",
   };
+
   return (
-    <div className=" md:px-8 sm:px-4 px-2  min-h-[100vh] scroll-mt-6 pb-8">
+    <div className="container">
       {/* Projects section */}
       <section>
-        <h2 className="heading">Projects</h2>
-        <p className="text-light font-semibold text-[18px] md:text-[22px]">
+        <h1>Projects</h1>
+        <p className="w-full">
           Here are some selected and challenging personal projects that I have
           worked on so far which enabled me to level up my skills to a
           fascinating point that makes me feel confident in tackling more
@@ -36,7 +37,7 @@ const Project = () => {
               ...articleStyle,
               backgroundImage: `url(${project.img})`,
             }}
-            className="border-[3px] relative rounded-[8px] md:w-[400px] min-w-[250px] h-[200px] border-primary group"
+            className="border-[3px] relative rounded-[8px] md:w-[400px] min-w-[250px] h-[200px] border-[var(--primary)] group"
             key={i}
             ref={ref}
             animate={control}

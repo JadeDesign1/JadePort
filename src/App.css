@@ -1,3 +1,104 @@
+:root {
+  --bgColor: black;
+  --tColor: white;
+  --bg2: #353636fa;
+  --primary: "#28a096",
+  --plight: "#a8e0db",
+  --pdark: "#145853",
+  --dark: "#000",
+  --lightDark: "#363636",
+  --light: "#f1f1f1",
+}
+[data-theme="dark"] {
+  --primary: #28a096;
+  --bgColor: black;
+  --tColor: white;
+  --bg2: #353636fa;
+  --link: #a8e0db;
+  --linkBg: #465252;
+  --linkBg2: #596868;
+  --outletText: #a8e0db;
+  --formtext: white;
+  --iconSun: yellow;
+  --iconMoon: white; 
+  --iconBg: #464747; 
+  --iconBgSun: black; 
+}
+
+[data-theme="light"] {
+   --primary: #316966;
+  --bgColor: #b9bebe;
+  --tColor: black;
+  --bg2: #dfe0e0;
+  --link: #145853;
+  --linkBg: #abadad;
+  --linkBg2: #dfe0e0;
+  --outletText: #249993;
+  --formtext: black;  
+  --iconSun: yellow;
+  --iconMoon: white; 
+  --iconBg: transparent; 
+  --iconBgSun: black; 
+}
+
+/* HomeSection */
+h1{
+  @apply text-[25px] md:text-[40px] sm:text-[38px] sm:font-[750px] lg:text-[50px] lg:font-[800] duration-200 font-[650] md:tracking-wide leading-[40px] md:leading-[70px] xl:leading-[80px] text-[var(--primary)]
+}
+
+section p {
+  @apply text-[var(--outletText)] lg:w-1/2 md:w-2/3 font-semibold text-[18px] md:text-[20px] mt-4
+}
+
+.img{
+  @apply  ring-2 shadow-md shadow-[var(--primary)] ring-[var(--primary)] border-2 rounded-full h-[150px] w-[150px] sm:h-[180px] sm:w-[180px]
+}
+/* HomeSection end */
+
+/* Darkmode start */
+.dLabel {
+  @apply bg-[var(--bgColor)] flex flex-row w-fit rounded-2xl ml-2;
+}
+.sun{
+  @apply text-[var(--iconSun)] bg-[var(--iconBgSun)] rounded-full p-2 
+}
+.moon{
+  @apply text-[var(--iconMoon)] bg-[var(--iconBg)]  rounded-full p-2
+}
+.modeContainer {
+  @apply fixed md:block hidden sm:top-3 sm:right-3;
+}
+.dInput {
+  @apply opacity-0 hidden;
+}
+
+/* Darkmode end */
+
+/* root css */
+.rootContainer {
+  @apply grid grid-cols-10 gap-[2px] min-h-[100vh] bg-[var(--bgColor)];
+}
+
+.container{
+  @apply md:px-8 sm:px-4 px-2 mt-4 min-h-[100vh] scroll-mt-6 pb-8
+}
+
+.outletContainer {
+  @apply overflow-x-hidden col-span-10  xl:col-span-8 bg-[var(--bg2)] text-[#d1d1d1] md:col-span-7;
+}
+/* root css end */
+
+.active {
+  @apply bg-[var(--linkBg)];
+}
+
+/* Sidebar */
+.navContainer {
+  @apply lg:text-[24px] duration-100 text-[20px] px-2 pt-4 font-semibold flex flex-row items-center gap-4 tracking-wider rounded-sm cursor-pointer capitalize text-[var(--link)] hover:bg-[var(--linkBg2)] pb-2;
+}
+/* Sidebar End */
+
+/* svg start*/
 .svg-circle {
   position: absolute;
   top: -8px;
@@ -25,26 +126,41 @@
     -0.5px -0.5px 0px rgba(255, 255, 255, 1),
     0.5px 0.5px 0px rgba(0, 0, 0, 0.15), 0px 12px 10px 10px rgba(0, 0, 0, 0.05);
 }
+/* svg end */
 
-.heading {
-  @apply text-[25px] md:text-[50px] sm:text-[38px] sm:font-[750px] lg:text-[60px] lg:font-[800] duration-200 font-[650] whitespace-nowrap md:tracking-wide leading-[70px] md:leading-[90px] text-primary text-start;
+/* form */
+form{
+  @apply mx-auto text-light gap-1 sm:gap-2 w-full flex justify-center items-start flex-col text-xs md:text-sm
 }
 
+form section{
+  @apply flex flex-col justify-center sm:justify-start mx-auto w-[280px] sm:w-[60%] lg:w-1/2 sm:gap-2
+}
 .label {
-  @apply pl-2 font-semibold peer-focus:tracking-widest tracking-wider peer-placeholder-shown:font-normal text-sm top-0 sm:text-sm peer-placeholder-shown:text-light  peer-placeholder-shown:text-sm peer-placeholder-shown:top-6 transition-all duration-300 absolute peer-focus:top-0 peer-focus:text-sm peer-focus:font-normal;
+  @apply pl-2 font-semibold text-primary peer-focus:tracking-widest tracking-wider peer-placeholder-shown:font-normal text-sm top-0 sm:text-sm peer-placeholder-shown:text-[var(--primary)]  peer-placeholder-shown:text-sm peer-placeholder-shown:top-7 transition-all duration-300 absolute peer-focus:top-0 peer-focus:text-sm peer-focus:font-normal;
 }
 .input {
-  @apply bg-light/30 w-full placeholder:text-transparent outline-none border sm:text-base text-sm rounded-lg pl-2 py-1 flex border-primary;
+  @apply bg-light/30 w-full placeholder:text-transparent text-[var(--formtext)] outline-none border sm:text-base text-sm rounded-lg pl-2 py-1 lg:py-2 lg:text-base flex border-primary;
 }
+/* form end */
+
 
 .btn {
-  @apply relative whitespace-nowrap px-16 mt-6 isolate flex justify-center items-center select-none overflow-hidden rounded-tr-[24px] rounded-bl-[24px] border align-middle transition-all duration-500 before:absolute before:-start-3 before:top-0 before:-z-10 before:h-full before:w-[calc(100%+1.5rem)] before:origin-right before:-skew-x-[16deg] before:scale-x-0 before:transition-transform before:duration-500 hover:[&:not(:disabled)]:before:scale-x-100 focus-visible:[&:not(:disabled)]:before:scale-x-100 active:[&:not(:disabled)]:scale-[1.01] disabled:opacity-70 py-3 md:text-lg hover:[&:not(:disabled)]:tracking-[0.075em] bg-neutral-800 hover:[&:not(:disabled)]:text-neutral-50 focus-visible:text-dark text-primary border-primary hover:text-dark before:bg-primary disabled:cursor-progress max-sm:w-1/2;
+  @apply relative whitespace-nowrap px-16 mt-6 isolate flex justify-center items-center select-none overflow-hidden rounded-tr-[24px] rounded-bl-[24px] border align-middle transition-all duration-500 before:absolute before:-start-3 before:top-0 before:-z-10 before:h-full before:w-[calc(100%+1.5rem)] before:origin-right before:-skew-x-[16deg] before:scale-x-0 before:transition-transform before:duration-500 hover:[&:not(:disabled)]:before:scale-x-100 font-semibold focus-visible:[&:not(:disabled)]:before:scale-x-100 active:[&:not(:disabled)]:scale-[1.01] disabled:opacity-70 py-3 md:text-lg hover:[&:not(:disabled)]:tracking-[0.075em] bg-[#235355] hover:[&:not(:disabled)]:text-[var(--primary)] focus-visible:text-dark text-[var(bgcolor)] border-[var(--primary)] hover:text-dark before:bg-[var(--bgColor)] disabled:cursor-progress max-sm:w-1/2;
 }
 
-.active {
-  @apply bg-plight text-pdark;
-}
 
 * {
-  @apply transition-all duration-100;
+  @apply transition-all duration-300;
 }
+
+/* mobile nav */
+.navToggle{
+  @apply float-right sm:mr-2 mt-1 bg-[#42575a] hover:bg-[#505352] z-[100] w-[50px] flex justify-center relative cursor-pointer items-center p-1 rounded-full h-[50px] 
+}
+
+.closeToggle{
+  @apply text-pdark text-[25px] hover:rotate-180 duration-500 font-bold z-[1200] relative inline-block
+}
+
+/* mobile nav end */

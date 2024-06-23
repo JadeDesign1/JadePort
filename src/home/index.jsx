@@ -27,22 +27,18 @@ const Home = () => {
     >
       {/* Home section */}
       <section className="sm:w-[180px]  md:hidden mx-auto sm:h-[180px] mt-10">
-        <img
-          src="fm.jpg"
-          alt=""
-          className=" ring-4 ring-primary border-2 border-plight rounded-full h-[150px] w-[150px] sm:h-[180px] sm:w-[180px]"
-        />
+        <img src="fm.jpg" alt="" className="img" />
       </section>
       <section className="md:mt-14">
-        <h2 className=" text-[25px] md:text-[40px] sm:text-[38px] sm:font-[750px] lg:text-[50px] lg:font-[800] duration-200 font-[650] md:tracking-wide leading-[40px] md:leading-[70px] xl:leading-[80px] text-primary">
-          Hi, 👋
+        <h1>
+          Hi, <span className=" animate-pulse">👋</span>
           <br />
           <span>
             <span className="whitespace-nowrap"> I'm Joseph Oluwafemi</span>{" "}
             <br />
             <span className="whitespace-nowrap">A Frontend Developer.</span>
           </span>
-        </h2>
+        </h1>
       </section>
       <motion.div
         ref={ref}
@@ -54,7 +50,7 @@ const Home = () => {
           visible: { opacity: 1, y: 0 },
         }}
       >
-        <section className="text-white lg:w-1/2 md:w-2/3 font-semibold text-[18px] md:text-[22px] mt-4">
+        <section>
           <p>
             I am a skilled frontend developer with a talent for merging
             creativity and technical expertise to craft compelling user
