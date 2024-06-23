@@ -15,7 +15,7 @@ const Skills = () => {
   }, [isInView]);
   return (
     <div className="flex flex-col h-full gap-4 items-center">
-      <div className="mt-8 flex-wrap w-full flex flex-row mx-auto justify-center gap-2 ">
+      <div className="mt-4 flex-wrap w-full flex flex-row mx-auto justify-center gap-2 ">
         {Ski.map((ski, i) => {
           return (
             <motion.section

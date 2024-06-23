@@ -6,10 +6,10 @@ const Sidebar = () => {
   const location = useLocation();
   const path = location.pathname;
   return (
-    <aside className="px-2 pt-6 fixed">
+    <aside className=" pt-4 fixed">
       {/* Sidebar content */}
       <section className="h-full px-6 w-full flex flex-col ">
-        <article className="flex flex-col justify-center items-center gap-4">
+        <article className="flex flex-col justify-center items-center gap-2">
           <img
             src="fm.jpg"
             alt=""
@@ -21,7 +21,7 @@ const Sidebar = () => {
         </article>
 
         <article>
-          <ul className="mt-8 flex flex-col  gap-2">
+          <ul className="mt-4 flex flex-col  gap-2">
             {Links.map((navLink, i) => {
               return (
                 <Link

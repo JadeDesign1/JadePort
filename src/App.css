@@ -47,7 +47,7 @@ h1{
 }
 
 section p {
-  @apply text-[var(--outletText)] lg:w-1/2 md:w-2/3 font-semibold text-[18px] md:text-[20px] mt-4
+  @apply text-[var(--outletText)] lg:w-1/2 md:w-2/3 font-semibold text-[18px] md:text-[20px] mt-1
 }
 
 .img{

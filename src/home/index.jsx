@@ -15,7 +15,7 @@ const Home = () => {
 
   return (
     <motion.div
-      className="md:px-8 sm:px-8 px-4 scroll-mt-6 min-h-[100vh] flex flex-col gap-6 mb-8"
+      className="md:px-8 sm:px-8 px-4 scroll-mt-6 min-h-[100vh] flex flex-col gap-4 mb-8"
       ref={ref}
       initial="hidden"
       animate={control}
@@ -29,7 +29,7 @@ const Home = () => {
       <section className="sm:w-[180px]  md:hidden mx-auto sm:h-[180px] mt-10">
         <img src="fm.jpg" alt="" className="img" />
       </section>
-      <section className="md:mt-14">
+      <section className="md:mt-10">
         <h1>
           Hi, <span className=" animate-pulse">👋</span>
           <br />
